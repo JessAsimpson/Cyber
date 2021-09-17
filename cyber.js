@@ -41,34 +41,33 @@ class Animal {
     }
 
     increaseHealth() {
-        this._health ++;
-    }
+        this._health += 10;  }
     reduceHealth () {
-        this._health --;
+        this._health -= 10;
     }
     increaseHunger () {
-        this._hunger ++;
+        this._hunger += 10;
     }
     reduceHunger () {
-        this._hunger --;
+        this._hunger -=10;
     }
     increaseThirst () {
-        this._thirst ++;
+        this._thirst +=10;
     }
     reduceThirst () {
-        this._thirst --;
+        this._thirst -=10;
     }
     increaseTiredness () {
-        this._tiredness ++;
+        this._tiredness +=10;
     }
     reduceTiredness () {
-        this._tiredness --;
+        this._tiredness -=10;
     }
     increaseHappiness () {
-        this._happiness ++;
+        this._happiness +=10;
     }
     reduceHappiness () {
-        this._happiness --;
+        this._happiness -=10;
     }
 }
 
@@ -86,8 +85,7 @@ class Cat extends Animal {
 class Dog extends Animal {
     constructor(name) {
         super(name)
-        this._type = "Dog",
-        this._barks = true
+        this._type = "Dog"
     }
 
     get type () {
@@ -130,6 +128,20 @@ const game = () => {
             if (userPet._health <= 0) {
                 throw new Error("Game Over")
             }
+            else if(userPet._hunger >= 100) {
+                console.log("Your pet is too hungry");
+                throw new Error("Game Over")
+            } else if(userPet._thirst >= 100) {
+                console.log("Your pet is too thirsty")
+                throw new Error("Game Over")
+            } else if (userPet._tiredness >= 100) {
+                console.log("Your pet is too tired")
+                throw new Error("Game Over")
+            } else if (userPet._happiness <=0) {
+                console.log("Your pet is too unhappy");
+                throw new Error("Game Over")
+            }
+
             // sort this the options :)
             else if (answer.activities == "Feed") {
                 console.log("Feeding your pet")
@@ -137,33 +149,37 @@ const game = () => {
                 userPet.increaseThirst();
                 userPet.increaseHealth();
                 userPet.increaseHappiness(); 
-            } else if (answer.activities == "Play") {
+            } else if (answer.activities == "Play") {``
+                console.log("Playing with your pet")
                 userPet.increaseTiredness();
                 userPet.increaseHappiness();
                 userPet.increaseHealth();
                 userPet.increaseHunger();
                 userPet.increaseThirst();
             } else if (answer.activities == "Give a Drink"){
+                console.log("Giving your pet a drink")
                 userPet.reduceThirst();
                 userPet.increaseHealth();
                 userPet.increaseHappiness();
             } else if (answer.activities == "Give Cuddles"){
+                console.log("Giving your pet cuddles")
                 userPet.increaseHappiness();
                 userPet.increaseTiredness();
                 userPet.increaseHunger();
                 userPet.increaseThirst();
             } else if (answer.activities == "Give a Bath") {
+                console.log("Giving your pet a bath")
                 userPet.increaseHappiness();
                 userPet.increaseTiredness();
                 userPet.increaseHunger();
                 userPet.increaseThirst();
             } else if (answer.activities == "Let's Have a Sleep") {
+                console.log("Letting your pet have a nice sleep")
                 userPet.increaseHunger();
                 userPet.increaseThirst();
                 userPet.increaseHappiness();
                 userPet.reduceTiredness();
             }
-            console.log(answer.activities)
         })
         .then(() => {
             console.table(userPet)
