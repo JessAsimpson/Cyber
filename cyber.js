@@ -1,4 +1,16 @@
 const inquirer = require("inquirer");
+const chalk = require('chalk');
+const figlet = require("figlet");
+
+figlet('Cyber Pet!!', function (err, data) {
+    if (err) {
+        console.log('Something went wrong...');
+        console.dir(err);
+        return;
+    } console.log(data);
+});
+
+
 let startQuestions = [
     {
         name: 'pet',
@@ -127,60 +139,71 @@ const game = () => {
         .then((answer) => {
             if (userPet._health <= 0) {
                 throw new Error("Game Over")
-            }
-            else if(userPet._hunger >= 100) {
-                console.log("Your pet is too hungry");
+            } else if(userPet._hunger >= 100) {
+                console.log(chalk.red("Your pet is too hungry"));
                 throw new Error("Game Over")
             } else if(userPet._thirst >= 100) {
-                console.log("Your pet is too thirsty")
+                console.log(chalk.red("Your pet is too thirsty"));
                 throw new Error("Game Over")
             } else if (userPet._tiredness >= 100) {
-                console.log("Your pet is too tired")
+                console.log(chalk.red("Your pet is too tired"));
                 throw new Error("Game Over")
             } else if (userPet._happiness <=0) {
-                console.log("Your pet is too unhappy");
+                console.log(chalk.red("Your pet is too unhappy"));
                 throw new Error("Game Over")
-            }
-
+            } 
+            // else if (userPet._health == 20) {
+            //     console.log(chalk.yellow("Your pets health is low"));
+            // } else if (userPet._hunger == 80) {
+            //     console.log(chalk.yellow("You need to feed your pet"));
+            // } else if(userPet._thirst == 80) {
+            //     console.log(chalk.yellow("Your pet needs a drink"));
+            // } else if (userPet._tiredness == 80) {
+            //     console.log(chalk.yellow("Your pet needs a sleep"));
+            // } else if (userPet._happiness == 20) {
+            //     console.log(chalk.yellow("Your pet needs some attention"));
+            // }
             // sort this the options :)
             else if (answer.activities == "Feed") {
-                console.log("Feeding your pet")
+                console.log(chalk.blue("Feeding your pet"));
                 userPet.reduceHunger();
                 userPet.increaseThirst();
                 userPet.increaseHealth();
                 userPet.increaseHappiness(); 
             } else if (answer.activities == "Play") {``
-                console.log("Playing with your pet")
+                console.log(chalk.blue("Playing with your pet"));
                 userPet.increaseTiredness();
                 userPet.increaseHappiness();
                 userPet.increaseHealth();
                 userPet.increaseHunger();
                 userPet.increaseThirst();
             } else if (answer.activities == "Give a Drink"){
-                console.log("Giving your pet a drink")
+                console.log(chalk.blue("Giving your pet a drink"));
                 userPet.reduceThirst();
                 userPet.increaseHealth();
                 userPet.increaseHappiness();
             } else if (answer.activities == "Give Cuddles"){
-                console.log("Giving your pet cuddles")
+                console.log(chalk.blue("Giving your pet cuddles"));
                 userPet.increaseHappiness();
                 userPet.increaseTiredness();
                 userPet.increaseHunger();
                 userPet.increaseThirst();
             } else if (answer.activities == "Give a Bath") {
-                console.log("Giving your pet a bath")
+                console.log(chalk.blue("Giving your pet a bath"));
                 userPet.increaseHappiness();
                 userPet.increaseTiredness();
                 userPet.increaseHunger();
                 userPet.increaseThirst();
             } else if (answer.activities == "Let's Have a Sleep") {
-                console.log("Letting your pet have a nice sleep")
+                console.log(chalk.blue("Letting your pet have a nice sleep"));
                 userPet.increaseHunger();
                 userPet.increaseThirst();
                 userPet.increaseHappiness();
                 userPet.reduceTiredness();
             }
         })
+        
+           
         .then(() => {
             console.table(userPet)
         })
