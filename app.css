@@ -1,0 +1,99 @@
+
+#choosePet{
+    display:flex;
+    justify-content: center;
+    font-size:xx-large;
+    font-family: 'Mansalva', cursive;
+    color: lightslategray;
+}
+
+
+#namePet{
+    display:none;
+    font-size:xx-large;
+    font-family: 'Mansalva', cursive;
+    color: lightslategray;
+    padding-left:140px;
+}
+
+#form{
+    display:flex;
+    justify-content:center;
+    margin:50px;
+}
+#input{
+    display:none;  
+} 
+#submit{
+    display:none;
+}
+#stats{
+    border: solid black 1px;
+    display:none;   
+}
+
+#petImages{
+  
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+    height:250px;
+    width:100%;
+}
+
+#petType{
+    justify-content: space-evenly;
+    display:flex;
+    margin-top: 20px;
+    margin-bottom:20px;
+    height:60px;
+    width:100%;
+    
+}
+
+#dogButton{
+    width:170px;
+    background-color: white;
+    color: black;
+    border: 5px solid rgb(146, 202, 193);
+    border-radius: 2em;
+    font-family: 'Mansalva', cursive;
+    font-size: 30px;
+    color: rgb(161, 132, 95);
+    
+}
+
+#rabbitButton{
+    width:170px;
+    background-color: white;
+    border-radius: 2em;
+    color: black;
+    font-family: 'Mansalva', cursive;
+    font-size: 30px;
+    border: 5px solid rgb(248, 216, 127);
+    color: gray;
+}
+#catButton{
+    width:170px;
+    background-color: white;
+    border-radius: 2em;
+    color: black;
+    font-family: 'Mansalva', cursive;
+    font-size: 30px;
+    border: 5px solid rgb(183, 209, 134);
+    color: rgb(248, 183, 192);
+}
+/* #activities{
+    display:none;
+} */
+
+#feed{
+    width:170px;
+    background-color: white;
+    border-radius: 2em;
+    color: black;
+    font-family: 'Mansalva', cursive;
+    font-size: 30px;
+    border: 5px solid rgb(183, 209, 134);
+    color: rgb(248, 183, 192);
+}
