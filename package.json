@@ -1,0 +1,16 @@
+{
+  "name": "cyberpet",
+  "version": "1.0.0",
+  "description": "inquier file for cyberpet ",
+  "main": "pet.js",
+  "dependencies": {
+    "inquirer": "^8.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "author": "jess & lorraine",
+  "license": "ISC"
+}
