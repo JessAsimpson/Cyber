@@ -76,47 +76,47 @@ submit.addEventListener("click", () => {
 
 
 feed.addEventListener("click", () => {
-    usersPet.increaseHealth(10);
-    usersPet.increaseHappiness(10);
-    usersPet.increaseThirst(10);
-    usersPet.increaseTiredness(10);
-    usersPet.reduceHunger(10);
+    usersPet.increaseHealth();
+    usersPet.increaseHappiness();
+    usersPet.increaseThirst();
+    usersPet.increaseTiredness();
+    usersPet.reduceHunger();
 });
 
 drink.addEventListener("click", () => {
-    usersPet.increaseHealth(10);
-    usersPet.increaseHappiness(10);
-    usersPet.reduceThirst(10);
-    usersPet.reduceTiredness(10);
+    usersPet.increaseHealth();
+    usersPet.increaseHappiness();
+    usersPet.reduceThirst();
+    usersPet.reduceTiredness();
 });
 
 sleep.addEventListener("click", () => {
-    usersPet.increaseHealth(10);
-    usersPet.increaseHappiness(10);
-    usersPet.reduceTiredness(10);  
+    usersPet.increaseHealth();
+    usersPet.increaseHappiness();
+    usersPet.reduceTiredness();
 });
 
 play.addEventListener("click", () => {
-    usersPet.increaseHealth(10);
-    usersPet.increaseHappiness(10);
-    usersPet.increaseThirst(10);
-    usersPet.increaseTiredness(10);
-    usersPet.reduceHunger(10);
+    usersPet.increaseHealth();
+    usersPet.increaseHappiness();
+    usersPet.increaseThirst();
+    usersPet.increaseTiredness();
+    usersPet.reduceHunger();
 });
 
-cuddle.addEventListener("click", () => {  
-    usersPet.increaseHappiness(10);
-    usersPet.increaseTiredness(10);
+cuddle.addEventListener("click", () => {
+    usersPet.increaseHappiness();
+    usersPet.increaseTiredness();
 });
 
 bath.addEventListener("click", () => {
-    usersPet.increaseHealth(10);
-    usersPet.increaseHappiness(10);
-    usersPet.increaseTiredness(10);
+    usersPet.increaseHealth();
+    usersPet.increaseHappiness();
+    usersPet.increaseTiredness();
 });
 
 cleanCage.addEventListener("click", () => {
-    usersPet.increaseHealth(10);
-    usersPet.increaseHappiness(10);
-    usersPet.increaseTiredness(10);
+    usersPet.increaseHealth();
+    usersPet.increaseHappiness();
+    usersPet.increaseTiredness();
 });
